@@ -28,6 +28,9 @@ body {
   font-size: 24px;
 }
  * {
+  padding: 0;
+  border: 0;
+  margin: 0;
   transition: all 0.6s;
  }
 
@@ -501,6 +504,14 @@ button:hover {
 }
 .text-center {
   text-align: center;
+}
+
+/* positions */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
 }
 
 /* extras */
