@@ -1,0 +1,49 @@
+#side-nav {
+  width: 20%;
+  background-color: black;
+  color: white;
+  position: fixed;
+  padding: 2%;
+  height: 100%;
+  box-sizing: content-box;
+  font-size: 98%;
+  transition: all 0.5s;
+  overflow-y: auto;
+}
+
+#side-nav img {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  margin-top: 8%;
+}
+
+.drop-down-body,
+.drop-down-header {
+  text-align: left;
+}
+
+.drop-down {
+  margin-top: 5%;
+  cursor: pointer;
+  padding: 2%;
+}
+.drop-down-body {
+  padding: 1%;
+}
+
+.drop-down-body {
+  height: 0px;
+  overflow: hidden;
+  font-size: small;
+}
+
+
+.drop-down-header:hover ~ .drop-down-body {
+  height: 100%;
+}
+.drop-down-item {
+  padding: 5%;
+  margin: 2.3%;
+  border: solid 1.3px var(--secondary-color);
+}
