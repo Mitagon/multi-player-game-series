@@ -524,6 +524,9 @@ button:hover {
   z-index: 1;
 }
 
+section {
+  padding: 5%;
+}
 
 /* media queries */
 @media (max-width: 600px) {
