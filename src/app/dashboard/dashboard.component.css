@@ -1,11 +1,11 @@
 #side-nav {
   width: 20%;
-  background-color: black;
-  color: white;
+  /* background-color: black;
+  color: white; */
   position: fixed;
   padding: 2%;
   height: 100%;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-size: 98%;
   transition: all 0.5s;
   overflow-y: auto;
@@ -16,6 +16,15 @@
   height: 75px;
   width: 75px;
   margin-top: 8%;
+}
+
+.drop-down-header {
+  border-bottom: solid 2px var(--secondary-color) ;
+  padding: 2%;
+}
+
+.drop-down-header:hover {
+  border: solid 2px transparent;
 }
 
 .drop-down-body,
@@ -46,4 +55,26 @@
   padding: 5%;
   margin: 2.3%;
   border: solid 1.3px var(--secondary-color);
+}
+
+#main {
+  width: 80%;
+  float: right;
+  box-sizing:border-box;
+}
+
+#main #page-content {
+  padding: 5%;
+}
+
+#main-nav {
+  background-color: black;
+  text-align: right;
+  color: white;
+}
+
+#main ul li {
+  display: inline-block;
+  padding: 0.4%;
+  font-size: 80%;
 }
