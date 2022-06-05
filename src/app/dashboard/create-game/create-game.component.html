@@ -1,0 +1,16 @@
+<form [formGroup]="createGameForm">
+  <h1>Create a new Game</h1>
+  <div class="grid">
+    <div class="col-6 grid col-sm-12">
+      <input formControlName="name" class="col-12" type="text" placeholder="What is the name of this game">
+      <textarea formControlName="description" class="col-12" placeholder="Give this game a brief description"></textarea>
+      <textarea formArrayName="rules" class="col-12" placeholder="How it this game to be played? What are the rules?"></textarea>
+      <input formArrayName="maximumPlayers" class="col-12" type="number" name="" id="" placeholder="What is maximum number of players for this game">
+      <input (click)="fileInput.click()" type="text" class="col-12" placeholder="Select an AVI that represents this game">
+      <input formControlName="avi" hidden #fileInput type="file">
+      <button class="col-12">
+        Create Game &#8594;
+      </button>
+    </div>
+  </div>
+</form>

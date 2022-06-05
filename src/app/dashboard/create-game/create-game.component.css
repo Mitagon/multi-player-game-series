@@ -1,0 +1,9 @@
+input, textarea {
+  margin: 1%;
+  padding: 2%;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+}
