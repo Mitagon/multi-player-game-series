@@ -514,6 +514,15 @@ button:hover {
   position: relative;
 }
 
+input, textarea {
+  border: solid black 1px;
+  padding: 1%;
+}
+
+textarea {
+  resize: vertical;
+}
+
 /* extras */
 .transparent {
   background-color: transparent;
