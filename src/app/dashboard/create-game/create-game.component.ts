@@ -13,7 +13,8 @@ export class CreateGameComponent implements OnInit {
     name: [null, Validators.required],
     description: [null, Validators.required],
     rules: [null, Validators.required],
-    maximumPlayers: [null, Validators.required]
+    maximumPlayers: [null, Validators.required],
+    avi: [null, Validators.required]
   });
 
   constructor(
