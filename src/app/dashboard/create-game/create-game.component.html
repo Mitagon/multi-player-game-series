@@ -8,8 +8,13 @@
       <input formArrayName="maximumPlayers" class="col-12" type="number" name="" id="" placeholder="What is maximum number of players for this game">
       <input (click)="fileInput.click()" type="text" class="col-12" placeholder="Select an AVI that represents this game">
       <input formControlName="avi" hidden #fileInput type="file">
-      <button class="col-12">
-        Create Game &#8594;
+      <button (click)="createGame()" class="col-12">
+        <ng-template *ngIf="submitting; else notSubmitting">
+          Processing... You will be redirected
+        </ng-template>
+        <ng-template #notSubmitting>
+          Create Game &#8594;
+        </ng-template>
       </button>
     </div>
   </div>
