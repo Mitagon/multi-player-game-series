@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { ServerResponseDto } from 'src/app/server-response-dto';
+import { environment } from 'src/environments/environment';
 import { CreateGameDto } from './create-game-dto';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class GameService {
   ) { }
 
   createGame(game: CreateGameDto): Observable<ServerResponseDto> {
-    const url = '';
+    const url = `${environment.apiBaseUrl}games`;
     return this.http.post<ServerResponseDto>(url, game)
       .pipe(
         (catchError(this.handleError))
