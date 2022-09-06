@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NotificationBarInputs } from './notification-bar-inputs';
 import { NotificationBarService } from './notification-bar.service';
 
 @Component({
