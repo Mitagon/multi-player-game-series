@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalInput } from '../shared/modal/modal-input';
 
 @Component({
   selector: 'app-index',
@@ -10,11 +9,12 @@ import { ModalInput } from '../shared/modal/modal-input';
 export class IndexComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
   }
+
   navigateToCreateRoom() {
     return this.router.navigate(['create-room'])
   }

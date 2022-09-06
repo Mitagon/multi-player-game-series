@@ -1,0 +1,25 @@
+.notification-bar {
+  padding: 2%;
+  min-width: 20vw;
+  position: fixed;
+  background-color: pink;
+  color: black;
+  bottom: 1%;
+  left: -100vw;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.close-notification-button {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+.active {
+  left: 0;
+}
+
+.inactive {
+  left: -100vw
+}
