@@ -34,3 +34,12 @@
 .modal-footer {
   margin-top: 4%;
 }
+
+.close-modal-button {
+  background-color: transparent;
+  padding: 0px;
+}
+
+.close-modal-button span {
+  font-weight: 900;
+}

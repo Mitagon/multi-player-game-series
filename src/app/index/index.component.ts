@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalInput } from '../shared/modal/modal-input';
 
 @Component({
   selector: 'app-index',

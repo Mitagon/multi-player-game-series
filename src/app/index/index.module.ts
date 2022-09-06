@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { IndexRoutingModule } from './index-routing.module';
 import { IndexComponent } from './index.component';
+import { ModalModule } from '../shared/modal/modal.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { IndexComponent } from './index.component';
   ],
   imports: [
     CommonModule,
-    IndexRoutingModule
+    IndexRoutingModule,
+    ModalModule
   ]
 })
 export class IndexModule { }
