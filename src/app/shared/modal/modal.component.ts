@@ -7,9 +7,28 @@ import { ModalInput } from './modal-input';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
+  /**
+   * modal inputs
+   */
   @Input() modal!: ModalInput;
+  /**
+   * modal outputs (events)
+   * These events are exported when buttons are clicked
+   * whithin the modal;
+   * Consume them via event binding
+   */
+
+  /**
+   * Call this function when the primary button is clicked
+   */
   @Output() primaryButtonClick = new EventEmitter<any>();
+  /**
+   * Call this function when the secondary button is clicked
+   */
   @Output() secondaryButtonClick = new EventEmitter<any>();
+  /**
+   * Call this function when the modal is closed
+   */
   @Output() closeModal = new EventEmitter<any>();
 
   @ViewChild('modalContainer') modalContainer!: ElementRef;
