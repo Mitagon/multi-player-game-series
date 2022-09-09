@@ -13,12 +13,12 @@ export class NotificationBarService {
     type: 'info'
   }
 
-  displayNotification(
+  displayMessage(
     notificationOptions: NotificationBarInputs
     ): NotificationBarInputs {
-
     this.notificationOptions = notificationOptions;
-    this.notificationOptions.duration? setTimeout(() => this.clearNotification(), this.notificationOptions.duration * 1000 ): this.notificationOptions;
+    this.notificationOptions.duration? setTimeout(() => this.clearNotification(),
+      this.notificationOptions.duration * 1000 ): this.notificationOptions;
     return notificationOptions;
   }
 

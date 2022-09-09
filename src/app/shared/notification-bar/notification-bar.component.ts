@@ -16,14 +16,14 @@ export class NotificationBarComponent implements OnInit {
    * handle notification bar closure
    * (If the user clicks/taps to close the notification bar)
    */
-  @Output() onCloseNotificationBar = new EventEmitter<any>()
+  @Output() onCloseNotificationBar = new EventEmitter<any>();
 
   ngOnInit(): void {
   }
 
   closeNotificationBar(event: Event): void {
-    this.notificationService.clearNotification()
-    return this.onCloseNotificationBar.emit(event)
+    this.notificationService.clearNotification();
+    return this.onCloseNotificationBar.emit(event);
   }
 
 }

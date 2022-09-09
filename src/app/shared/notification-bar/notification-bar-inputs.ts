@@ -11,6 +11,7 @@ export interface NotificationBarInputs {
   type: notificationTypes;
   /**
    * Duration to display the notification (in seconds)
+   * for example, 5 represents 5seconds
   */
   duration?: number;
 }

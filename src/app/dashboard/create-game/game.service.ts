@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { ServerResponseDto } from 'src/app/server-response-dto';
+import { ServerResponseDto } from 'src/app/shared/interfaces/server-response-dto';
 import { environment } from 'src/environments/environment';
 import { CreateGameDto } from './create-game-dto';
 
