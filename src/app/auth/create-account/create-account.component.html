@@ -2,14 +2,19 @@
   <div class="col-8"></div>
   <div style="background-color: black;" class="col-4 col-sm-12">
     <form [formGroup]="createAccountForm" class="grid pad-5">
-      <input formControlName="userName" class="col-12 pad-2 mg-b-2" type="string" placeholder="User name">
+      <input #userNameField
+      [pattern]="authService.userNameRegex"
+        (keyup)="checkIfUserNameIsTaken(userNameField.value.trim().toLowerCase())"
+        formControlName="userName"
+        class="col-12 pad-2 mg-b-2"
+        type="string" placeholder="User name"
+      >
       <input formControlName="email" class="col-12 pad-2 mg-b-2" type="email" placeholder="Email">
-      <input formControlName="password" type="password" class="pad-2 col-12 mg-b-2" name="" id="" placeholder="Password">
+      <input formControlName="password" type="password" class="pad-2 col-12 mg-b-2" name="" id=""
+        placeholder="Password">
       <button class="col-12 mg-t-4"> Sign up with Google</button>
       <button (click)="createUser()" class="create-account-button col-12 mg-t-10"> Create account</button>
     </form>
   </div>
 </div>
 <app-notification-bar></app-notification-bar>
-
-

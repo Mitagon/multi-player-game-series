@@ -34,14 +34,24 @@ export class ApiService {
   }
 
   createNewUser(newUser: NewUserDto): Observable <ServerResponseDto> {
-    return this.http.post<ServerResponseDto>(this.APIBaseURL, newUser)
+    const subUrl = `user/create`
+    return this.http.post<ServerResponseDto>(`${this.APIBaseURL}/${subUrl}`, newUser)
       .pipe(
         tap((response) => {
-          console.log(response)
+          /**
+           * to do
+           * Store user details
+           */
         }),
-        catchError((this.handleAPIErrors))
+        catchError(this.handleAPIErrors)
       )
   }
 
-
+  getUserByUserName(userName: string): Observable<ServerResponseDto> {
+    const subUrl = `user/user-names/${userName}`;
+    return this.http.get<ServerResponseDto>(`${this.APIBaseURL}/${subUrl}`)
+      .pipe(
+        catchError(this.handleAPIErrors)
+      )
+  }
 }
