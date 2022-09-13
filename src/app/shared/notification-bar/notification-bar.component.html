@@ -1,0 +1,12 @@
+<div [class.inactive]="notificationService.notificationOptions.message.length < 1"
+  [class.active]="notificationService.notificationOptions.message.length > 0"
+  class="notification-bar grid">
+  <div class="col-10">
+    {{notificationService.notificationOptions.message}}
+  </div>
+  <div class="text-right col-2">
+    <button (click)="closeNotificationBar($event)" class="close-notification-button">
+      <span class="mdi mdi-close"></span>
+    </button>
+  </div>
+</div>

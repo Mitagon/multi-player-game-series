@@ -1,0 +1,10 @@
+<!-- loader is to be placed to the right of items that are loading -->
+<div class="loader-container">
+  <span class="loader-text" *ngIf="loaderText">{{loaderText}}</span>
+  <div
+    *ngFor="let elipse of elipses"
+    class="loader-elipse"
+    [class.currentElipse]="elipse.id == currentElipse.id"
+  >
+  </div>
+</div>
