@@ -1,0 +1,26 @@
+.loader-container {
+  display: inline-block;
+  margin: 0px 1% 0px 1%;
+  box-sizing: border-box;
+}
+
+.loader-elipse {
+  height: 7px;
+  width: 7px;
+  background-color: var(--secondary-color);
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 70%;
+}
+
+.currentElipse {
+  opacity: 100%;
+  background-color: var(--primary-color);
+}
+
+.loader-text {
+  font-size: small;
+  margin-right: 3%;
+  display: inline-block;
+}

@@ -16,11 +16,11 @@ export class AuthService {
   /**
    * user password regex is the same across the entire project
    */
-  public readonly userPasswordRegex = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
+  public readonly userPasswordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   /**
    * userName regex is the same across the entire project
    */
-  public readonly userNameRegex = "^@?(\w){1,15}$";
+  public readonly userNameRegex = /^@?(\w){1,15}$/;
   /**
    * @param userPassword
    * @returns hashed userPassword

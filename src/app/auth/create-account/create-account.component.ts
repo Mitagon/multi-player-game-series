@@ -18,15 +18,29 @@ export class CreateAccountComponent implements OnInit {
     public authService: AuthService,
   ) { }
 
-  createAccountForm: FormGroup = this.formBuilder.group({
-    userName: [null, [
-        Validators.required,
-        Validators.pattern(this.authService.userNameRegex)
+  submitting: boolean = false;
+    createAccountForm  = this.formBuilder.group({
+      userName: [null,
+        [
+          Validators.required,
+          Validators.pattern(this.authService.userNameRegex)
+        ]
+      ],
+      email: [
+        null,
+        [
+          Validators.email,
+          Validators.required
+        ]
+      ],
+      password: [
+        null, [
+          Validators.pattern(this.authService.userPasswordRegex),
+          Validators.required
+        ]
       ]
-    ],
-    email: [null, [Validators.email, Validators.required]],
-    password: [null, Validators.pattern(this.authService.userPasswordRegex)]
-  });
+    })
+
 
   ngOnInit(): void {
   }
@@ -42,16 +56,19 @@ export class CreateAccountComponent implements OnInit {
              * taken
              */
 
-            window.alert('This User name is already taken');
+            this.createAccountForm.controls['userName'].setErrors({'forbiddenUserName': 'invalid'})
           }
         }
       )
   }
 
   createUser() {
+    console.log(this.createAccountForm.valid)
+    this.submitting = true;
     return this.authService.createNewUser(this.createAccountForm.value)
       .subscribe(
         (response) => {
+          this.submitting = false;
           this.notificationBar.displayMessage({
             message: response.message,
             type: 'success',
@@ -59,6 +76,7 @@ export class CreateAccountComponent implements OnInit {
           })
         },
         (error) => {
+          this.submitting = false;
           this.notificationBar.displayMessage({
             message: error.message,
             type: 'error',
